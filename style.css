@@ -1,0 +1,25 @@
+/* =========================================
+   Archivo: style.css
+   Proyecto: SOEL 360 Landing Page
+   ========================================= */
+
+html {
+  scroll-behavior: smooth; /* Hace que al dar clic en el menú, la página baje suavemente */
+}
+
+/* Ejemplo: Si quisieras ocultar la barra de desplazamiento lateral para que se vea más limpio */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+body::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 4px;
+}
+.imagen-centrada {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
