@@ -127,8 +127,39 @@
 
         <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2 text-center uppercase tracking-wider text-[#2e7d32]">Enviar Mensaje</h3>
         
+        <form action="#" method="POST" class="space-y-3">
+            <div>
+                <label for="nombre" class="block text-gray-600 text-xs font-semibold mb-1">Nombre(s)</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required
+                       class="w-full bg-gray-50 text-gray-800 text-sm px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-[#2e7d32] transition-colors">
+            </div>
+
+            <div>
+                <label for="email" class="block text-gray-600 text-xs font-semibold mb-1">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required
+                       class="w-full bg-gray-50 text-gray-800 text-sm px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-[#2e7d32] transition-colors">
+            </div>
+
+            <div>
+                <label for="telefono" class="block text-gray-600 text-xs font-semibold mb-1">Número de Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="A 10 dígitos"
+                       class="w-full bg-gray-50 text-gray-800 text-sm px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-[#2e7d32] transition-colors">
+            </div>
+
+            <div>
+                <label for="mensaje" class="block text-gray-600 text-xs font-semibold mb-1">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="2" placeholder="¿En qué podemos ayudarte?" required
+                          class="w-full bg-gray-50 text-gray-800 text-sm px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-[#2e7d32] transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" 
+                    class="w-full bg-[#2e7d32] hover:bg-[#235e26] text-white font-bold py-2.5 rounded-lg transition-colors duration-300 shadow-md text-sm uppercase tracking-wider">
+                Enviar mensaje
+            </button>
+            <div data-netlify-recaptcha="true" class="flex justify-center mt-3 transform scale-90"></div>
+        </form>
     </div>
-<div data-netlify-recaptcha="true" class="flex justify-center mt-3 transform scale-90"></div>
+
 </div>
 </section>
 
