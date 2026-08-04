@@ -116,7 +116,10 @@
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 
-    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-[30%] md:translate-x-0 md:top-[50%] md:-translate-y-1/2 w-[90%] max-w-[400px] bg-white p-6 rounded-xl shadow-2xl z-30 border border-gray-100">
+    <form name="contacto" method="POST" data-netlify="true" data-netlify-recaptcha="true" 
+      class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-[30%] md:translate-x-0 md:top-[50%] md:-translate-y-1/2 w-[90%] max-w-[400px] z-[100]">
+    
+    <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 w-full">
         
         <div class="flex justify-center mb-3">
             <img src="soluciones/contacto/logoSoel.jpeg" alt="Logo SOEL 360" class="h-10 object-contain">
@@ -128,7 +131,7 @@
 
         <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2 text-center uppercase tracking-wider text-[#2e7d32]">Enviar Mensaje</h3>
         
-        <form action="#" method="POST" class="space-y-3">
+        <div class="space-y-3">
             <div>
                 <label for="nombre" class="block text-gray-600 text-xs font-semibold mb-1">Nombre(s)</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required
@@ -157,8 +160,14 @@
                     class="w-full bg-[#2e7d32] hover:bg-[#235e26] text-white font-bold py-2.5 rounded-lg transition-colors duration-300 shadow-md text-sm uppercase tracking-wider">
                 Enviar mensaje
             </button>
-            <div data-netlify-recaptcha="true" class="flex justify-center mt-3 transform scale-90"></div>
-        </form>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-3">
+        <div data-netlify-recaptcha="true" class="transform scale-90 md:scale-100 origin-top bg-white/80 p-1 rounded-md shadow-sm backdrop-blur-sm"></div>
+    </div>
+
+</form>
     </div>
 
 </div>
