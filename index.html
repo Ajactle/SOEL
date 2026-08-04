@@ -445,11 +445,14 @@
         const btnIzquierda = document.getElementById('btnIzquierda');
         const btnDerecha = document.getElementById('btnDerecha');
 
-        const scrollAmount = 800; // Cuántos píxeles avanza de golpe
         let intervalo; // Variable para guardar el motor automático
 
         // 1. Función que mueve el carrusel hacia la derecha
         const moverDerecha = () => {
+            // 👇 LA MAGIA AQUÍ: Calculamos el ancho visible en tiempo real
+            // Esto asegura que avance "una página" completa sin dejar logos a la mitad
+            const scrollAmount = carrusel.clientWidth; 
+
             // Revisa si ya llegó al final del carrusel
             if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
                 // Si llegó al final, regresa suavemente al inicio
@@ -460,9 +463,9 @@
             }
         };
 
-        // 2. Función para iniciar el movimiento automático (cada 2.5 segundos)
+        // 2. Función para iniciar el movimiento automático
         const iniciarAutoScroll = () => {
-            intervalo = setInterval(moverDerecha, 2500);
+            intervalo = setInterval(moverDerecha, 3000); // Lo subí a 3 seg (3000) para dar tiempo a ver las 4 marcas
         };
 
         // 3. Función para detener el movimiento
@@ -472,6 +475,7 @@
 
         // EVENTOS MANUALES (Clics en las flechas)
         btnIzquierda.addEventListener('click', () => {
+            const scrollAmount = carrusel.clientWidth; // Calcula también al ir hacia atrás
             carrusel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
 
@@ -644,10 +648,16 @@
                     <span>Lu-Vi 9:30 a 18:00 hrs</span>
                 </li>
                 <li>
-                    <a href="https://wa.me/522711004419" target="_blank" class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
-                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors"><i class="fa-brands fa-whatsapp"></i></span>
-                        <span>271 100 4419</span>
-                    </a>
+                   <a href="https://wa.me/522711004419?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20soluciones%20de%20SOEL%20360." 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
+                    
+                    <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                   </span>
+                    <span>271 100 4419</span>
+                                            </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/profile.php?id=61567793574011" target="_blank" class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
