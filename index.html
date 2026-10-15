@@ -118,21 +118,7 @@
 
     </div>
 
-    <!-- 4. MENÚ DESPLEGABLE PARA CELULARES (Oculto por defecto) -->
-    <div id="menuMovil" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
-        <a href="index.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Inicio</a>
-        <a href="Nosotros.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Nosotros</a>
-        <a href="soluciones.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Soluciones</a>
-        <a href="Como_lo_hacemos.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">¿Cómo lo hacemos?</a>
-        
-        <!-- Botón de cotización dentro del menú móvil para celulares -->
-        <div class="pt-2 sm:hidden">
-            <a href="contacto.html" class="block w-full text-center bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2.5 rounded-full transition shadow-md">
-                Solicitar cotización
-            </a>
-        </div>
-    </div>
-
+   
     <!-- Scripts del Buscador y del Menú Móvil -->
     <script src="buscador.js"></script>
     <script>
@@ -408,6 +394,7 @@
     </div>
 </div>
 </section>
+
   <section class="bg-[#2d2d2d] mt-20 py-16 font-['Montserrat']"> <!--PY Es la parte de ancho de MR -->
     <div class="container mx-auto max-w-5xl"> <!-- Cambié max-w-6xl a max-w-5xl para que se vea mejor en pantallas grandes -->
         <h2 class="text-3xl font-bold text-white mb-10 text-center md:text-left">Nuestras industrias</h2>
@@ -525,66 +512,81 @@
         </div>
     </div>
 </section>
-        
     <footer id="contacto" class="relative w-full bg-[#2e7d32] text-white overflow-hidden mt-0 font-['Montserrat']">
     
-    <div class="flex flex-col md:flex-row items-center justify-between w-full h-auto md:h-80 relative z-20">
+    <div class="flex flex-col md:flex-row items-center justify-between w-full h-auto md:min-h-[320px] relative z-20">
         
-        <div class="w-full md:w-[40%] h-60 md:h-full relative shrink-0">
-            <img src="Inicio/Encabezado1.png"
+        <!-- 1. IMAGEN Y LOGO FLOTANTE -->
+        <div class="w-full md:w-[38%] h-52 sm:h-64 md:h-80 relative shrink-0">
+            <!-- Cambiamos w-140 h-140 por w-full h-full para que no se desborde en celulares -->
+            <img src="Inicio//Encabezado2.png"
                  alt="Ingenieros SOEL"
-                 class="absolute inset-0 w-140 h-140 object-cover object-center opacity-100">
+                 class="absolute inset-0 w-full h-full object-cover object-center">
                  
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#2e7d32]/80 to-[#2e7d32]"></div>
+            <!-- Degradado hacia abajo en celular (bg-gradient-to-b) y hacia la derecha en PC (md:bg-gradient-to-r) -->
+            <div class="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-[#2e7d32]/75 to-[#2e7d32]"></div>
 
-            <div class="absolute top-1/2 -translate-y-1/2 right-4 md:-right-16 bg-white p-3 rounded-2xl shadow-xl z-30">
-                <img src="LogoSoel.jpeg" alt="SOEL 360 Logo" class="w-32 md:w-40 h-auto object-contain">
+            <!-- En celular el logo queda centrado abajo de la foto; en PC se pasa a la derecha -->
+            <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:top-1/2 md:-translate-y-1/2 md:-right-12 bg-white p-3 rounded-2xl shadow-xl z-30">
+                <img src="LogoSoel.jpeg" alt="SOEL 360 Logo" class="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain">
             </div>
         </div>
 
-        <div class="w-full md:w-[28%] px-8 py-10 md:py-0 text-center md:text-left z-70 zmd:pl-8">
-            <p class="text-sm font-light mb-1">Proveemos soluciones MRO para la industria</p>
-            <h2 class="text-2xl md:text-4xl font-light leading-tight">Lo hacemos por ti...</h2>
+        <!-- 2. LEMA CENTRAL -->
+        <div class="w-full md:w-[32%] px-6 pt-14 pb-6 md:py-0 text-center md:text-left z-30 md:pl-16 lg:pl-20">
+            <p class="text-xs sm:text-sm font-light mb-1 opacity-90">Proveemos soluciones MRO para la industria</p>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight">Lo hacemos por ti...</h2>
         </div>
 
-        <div class="w-full md:w-[23%] px-8 pb-10 md:py-0 z-30 flex flex-col md:items-start md:pr-12">
-            <div class="flex justify-start md:justify-start w-full border-b-2 border-white/50 pb-2 mb-6">
-                <h3 class="text-2xl md:text-3xl font-light">Contacto</h3>
+        <!-- 3. DATOS DE CONTACTO -->
+        <div class="w-full md:w-[30%] px-6 sm:px-10 pb-10 pt-2 md:py-8 z-30 flex flex-col items-center md:items-start md:pr-8 lg:pr-12">
+            
+            <!-- Título Contacto centrado en móvil y a la izquierda en PC -->
+            <div class="flex justify-center md:justify-start w-full max-w-xs md:max-w-none border-b-2 border-white/50 pb-2 mb-5">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-light">Contacto</h3>
             </div>
             
-            <ul class="space-y-4 text-sm font-medium w-full">
+            <!-- Lista de enlaces alineada en bloque limpio para celular -->
+            <ul class="space-y-3.5 text-xs sm:text-sm font-medium w-full max-w-xs md:max-w-none">
                 <li>
-                    <a href="https://maps.app.goo.gl/p6Y3fg29dkBYw1pk7" target="_blank" class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
-                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors"><i class="fa-solid fa-location-dot"></i></span>
+                    <a href="https://maps.app.goo.gl/p6Y3fg29dkBYw1pk7" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 hover:text-gray-200 transition-colors group">
+                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-base shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
                         <span>Córdoba, Ver</span>
                     </a>
                 </li>
-                <li class="flex items-center gap-4">
-                    <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0"><i class="fa-regular fa-clock"></i></span>
+                <li class="flex items-center gap-3.5">
+                    <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-base shrink-0">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
                     <span>Lu-Vi 9:30 a 18:00 hrs</span>
                 </li>
                 <li>
-                   <a href="https://wa.me/522711004419?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20soluciones%20de%20SOEL%20360." 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
-                    
-                    <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors">
-                    <i class="fa-brands fa-whatsapp"></i>
-                   </span>
-                    <span>271 100 4419</span>
-                                            </a>
+                    <a href="https://wa.me/522711004419?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20soluciones%20de%20SOEL%20360." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="flex items-center gap-3.5 hover:text-gray-200 transition-colors group">
+                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-base shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                        <span>271 100 4419</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/profile.php?id=61567793574011" target="_blank" class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
-                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors"><i class="fa-brands fa-facebook-f"></i></span>
+                    <a href="https://www.facebook.com/profile.php?id=61567793574011" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 hover:text-gray-200 transition-colors group">
+                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-base shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
                         <span>/ SOEL 360</span>
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:contacto@soel.com.mx" class="flex items-center gap-4 hover:text-gray-200 transition-colors group">
-                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-lg shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors"><i class="fa-regular fa-envelope"></i></span>
-                        <span>contacto@soel.com.mx</span>
+                    <a href="mailto:contacto@soel.com.mx" class="flex items-center gap-3.5 hover:text-gray-200 transition-colors group">
+                        <span class="w-8 h-8 rounded-full border border-white flex items-center justify-center text-base shrink-0 group-hover:bg-white group-hover:text-[#4caf50] transition-colors">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+                        <span class="break-all">contacto@soel.com.mx</span>
                     </a>
                 </li>
             </ul>
