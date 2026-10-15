@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOEL 360 - Soluciones MRO</title>
+    <title>SOEL 360 | Soluciones Integrales MRO y Suministros Industriales</title>
+
+    <!-- 2. METAETIQUETAS PRINCIPALES DE BÚSQUEDA (SEO) -->
+    <meta name="description" content="Proveemos soluciones integrales MRO para la industria en Orizaba, Córdoba y todo México. Las mejores marcas en automatización, rodamientos, neumática, bombeo y herramientas industriales.">
+    <meta name="keywords" content="SOEL 360, soluciones MRO, suministros industriales, mantenimiento industrial, refacciones industriales, automatización, rodamientos, neumática, importaciones industriales, Orizaba, Córdoba, Veracruz">
+    <meta name="author" content="SOEL 360 - Frío Potencia y Herramientas">
+    <meta name="robots" content="index, follow">
+
+    <!-- 3. URL CANÓNICA (Evita contenido duplicado en Google - Cambia por tu dominio final) -->
+    <link rel="canonical" href="https://soel360.netlify.app/">
+
+    <!-- 4. OPEN GRAPH (Para que al compartir el link por WhatsApp, LinkedIn o Facebook salga con foto y descripción profesional) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SOEL 360">
+    <meta property="og:title" content="SOEL 360 | Soluciones Integrales MRO para la Industria">
+    <meta property="og:description" content="Lo hacemos por ti. Las mejores marcas internacionales de suministros, refacciones, logística e importaciones MRO a tu alcance.">
+    <meta property="og:url" content="https://soel360.netlify.app/">
+    <meta property="og:image" content="https://soel360.netlify.app/soluciones/contacto/logoSoel.jpeg">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- 5. TWITTER / X CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SOEL 360 | Soluciones Integrales MRO">
+    <meta name="twitter:description" content="Proveemos soluciones MRO y las mejores marcas para la industria.">
+    <meta name="twitter:image" content="https://soel360.netlify.app/soluciones/contacto/logoSoel.jpeg">
+
+    <!-- 6. COLOR DE TEMA (Pinta la barra del navegador en celulares con el verde de SOEL 360) -->
+    <meta name="theme-color" content="#2e7d32">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -34,469 +61,355 @@
     </div>
   
     <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100 font-['Montserrat']">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Contenedor principal -->
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 py-3 md:py-4 flex justify-between items-center gap-2">
         
-        <div class="flex items-center">
-            <img src="LogoSoel.jpeg" alt="Logo SOEL" class="h-12 w-12 rounded-full mr-3"> 
-        </div>
+        <!-- 1. LOGO -->
+        <a href="index.html" class="flex items-center shrink-0">
+            <img src="LogoSoel.jpeg" alt="Logo SOEL" class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover"> 
+        </a>
         
-        <!-- Se cambió text-gray-600 por text-[#2e7d32] en el contenedor padre -->
-        <nav class="hidden md:flex items-center space-x-10 text-sm text-[#2e7d32] font-medium">
-            <!-- Se cambió text-gray-400 por text-[#2e7d32] en cada enlace -->
-            <a href="index.html" class="text-[#2e7d32] hover:opacity-80 transition">Inicio</a>
-            
-            <a href="Nosotros.html" class="text-[#2e7d32] hover:opacity-80 transition">Nosotros</a>
-            
-            <a href="soluciones.html" class="text-[#2e7d32] hover:opacity-80 transition">Soluciones</a>
-            
-            <a href="Como_lo_hacemos.html" class="text-[#2e7d32] hover:opacity-80 transition">¿Cómo lo hacemos?</a>
+        <!-- 2. MENÚ DE ESCRITORIO (Se oculta en celular, aparece en pantallas medianas/grandes) -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10 text-sm text-[#2e7d32] font-medium">
+            <a href="index.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Inicio</a>
+            <a href="Nosotros.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Nosotros</a>
+            <a href="soluciones.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Soluciones</a>
+            <a href="Como_lo_hacemos.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">¿Cómo lo hacemos?</a>
         </nav>
-    <!-- Buscador en tiempo real -->
-<div class="relative group ml-4">
-    <!-- Campo de búsqueda -->
-    <div class="flex items-center bg-gray-100 rounded-full px-3 py-1.5 border border-transparent focus-within:border-[#2e7d32] transition-colors shadow-inner">
-        
-        <!-- 👇 CAMBIO: Convertimos la lupa en un botón funcional con id="btnBuscar" 👇 -->
-        <button id="btnBuscar" class="outline-none focus:outline-none group-hover:text-[#2e7d32] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500 hover:text-[#2e7d32] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        </button>
 
-        <input type="text" id="buscadorWeb" placeholder="Buscar..." 
-               class="bg-transparent border-none outline-none text-sm ml-2 w-28 md:w-40 focus:w-48 transition-all duration-300 text-gray-700 placeholder-gray-400">
+        <!-- 3. BLOQUE DERECHO (Buscador + Icono MRO + Botón Cotizar + Botón Menú Móvil) -->
+        <div class="flex items-center gap-2 sm:gap-4">
+            
+            <!-- Buscador en tiempo real (Adaptado para no romper la pantalla en móvil) -->
+            <div class="relative group">
+                <div class="flex items-center bg-gray-100 rounded-full px-2.5 py-1.5 border border-transparent focus-within:border-[#2e7d32] transition-colors shadow-inner">
+                    <button id="btnBuscar" class="outline-none focus:outline-none group-hover:text-[#2e7d32] transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500 hover:text-[#2e7d32] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+
+                    <!-- En móvil mide w-24 y al tocarlo crece a w-32; en PC crece hasta w-48 -->
+                    <input type="text" id="buscadorWeb" placeholder="Buscar..." 
+                           class="bg-transparent border-none outline-none text-xs sm:text-sm ml-1.5 w-20 sm:w-28 md:w-36 focus:w-28 sm:focus:w-44 transition-all duration-300 text-gray-700 placeholder-gray-400">
+                </div>
+                
+                <!-- Contenedor desplegable de resultados -->
+                <div id="resultadosBusqueda" class="absolute top-full mt-2 right-0 sm:left-0 w-56 sm:w-full min-w-[200px] bg-white border border-gray-100 rounded-lg shadow-xl hidden flex-col overflow-hidden z-50">
+                    <!-- Los resultados se inyectarán aquí con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Icono de Aplicaciones / MRO -->
+            <a href="#aplicaciones" class="text-gray-600 hover:text-[#2e7d32] transition-colors cursor-pointer text-xl md:text-2xl flex items-center justify-center p-1 shrink-0" title="MRO">
+                <i class="fa-solid fa-grip"></i> 
+            </a>
+            
+            <!-- Botón Solicitar Cotización (Se oculta en celulares muy pequeños y se pasa al menú desplegable para que no se vea feo) -->
+            <a href="contacto.html" class="hidden sm:inline-block bg-[#2e7d32] hover:bg-green-800 text-white text-xs md:text-sm font-semibold py-2 px-4 md:px-6 rounded-full transition shadow-md whitespace-nowrap">
+                Solicitar cotización
+            </a>
+
+            <!-- Botón Hamburguesa (SOLO SE VE EN CELULAR/TABLET) -->
+            <button id="btnMenuMovil" class="lg:hidden text-[#2e7d32] text-2xl p-1 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
     </div>
-    
-    <!-- Contenedor desplegable de resultados -->
-    <div id="resultadosBusqueda" class="absolute top-full mt-2 left-0 w-full min-w-[200px] bg-white border border-gray-100 rounded-lg shadow-xl hidden flex-col overflow-hidden z-50">
-        <!-- Los resultados se inyectarán aquí con JavaScript -->
-    </div>
-</div>
-<script src="buscador.js"></script>
+
+    <!-- 4. MENÚ DESPLEGABLE PARA CELULARES (Oculto por defecto) -->
+    <div id="menuMovil" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
+        <a href="index.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Inicio</a>
+        <a href="Nosotros.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Nosotros</a>
+        <a href="soluciones.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Soluciones</a>
+        <a href="Como_lo_hacemos.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">¿Cómo lo hacemos?</a>
         
- <a href="#aplicaciones" class="text-gray-600 hover:text-[#2e7d32] transition-colors cursor-pointer text-2xl flex items-center justify-center p-1" title="MRO ">
-        <i class="fa-solid fa-grip"></i> 
-    </a>
-    
-    <a href="contacto.html" class="bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2 px-6 rounded-full transition shadow-md">
-        Solicitar cotización
-    </a>
-</div>
+        <!-- Botón de cotización dentro del menú móvil para celulares -->
+        <div class="pt-2 sm:hidden">
+            <a href="contacto.html" class="block w-full text-center bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2.5 rounded-full transition shadow-md">
+                Solicitar cotización
+            </a>
+        </div>
     </div>
+
+    <!-- Scripts del Buscador y del Menú Móvil -->
+    <script src="buscador.js"></script>
+    <script>
+        // Pequeño script para abrir y cerrar el menú en el teléfono
+        const btnMenu = document.getElementById('btnMenuMovil');
+        const menuMovil = document.getElementById('menuMovil');
+
+        if (btnMenu && menuMovil) {
+            btnMenu.addEventListener('click', () => {
+                menuMovil.classList.toggle('hidden');
+            });
+        }
+    </script>
 </header>
 </header>
 <!-- mejorar el encabezado -->
-<section class="relative h-[140vh] bg-[#2d2d2d] bg-no-repeat bg-cover bg-[180%_-200px] flex flex-col justify-center items-center text-center overflow-hidden" 
-         style="background-image: url('Inicio/Imagen1.jpg');">
-    
-    <div class="absolute inset-0 bg-black/50 z-0"></div>
-    <div class="relative z-10 w-full max-w-4xl px-4 -mt-80 flex flex-col justify-center items-center">     
-        <h1 class="text-[43px] font-['Montserrat'] uppercase underline decoration-2 underline-offset-8 font-bold text-white mb-6 tracking-wide drop-shadow-md">
-            Lo hacemos por ti
-        </h1>
-       <p class="text-[35px] text-gray-100 mb-8 font-light drop-shadow-sm leading-tight">
+<!-- Contenedor general de la portada -->
+<section class="relative w-full flex flex-col overflow-hidden">
+
+    <!-- BLOQUE 1: FOTO DE BODEGA + TEXTOS + ÍCONOS (Nunca será tapado) -->
+    <div class="relative w-full min-h-[65vh] md:min-h-[72vh] flex flex-col justify-center items-center text-center px-4 py-16 md:py-24">
+        
+        <!-- 1. IMAGEN DE FONDO -->
+        <img src="Inicio/Imagen1.jpg" 
+             alt="Almacén SOEL 360" 
+             class="absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none">
+
+        <!-- 2. CAPA OSCURA -->
+        <div class="absolute inset-0 bg-black/50 z-[1]"></div>
+
+        <!-- 3. TEXTOS E ÍCONOS -->
+        <div class="relative z-10 w-full max-w-4xl flex flex-col justify-center items-center">     
+            <h1 class="text-3xl md:text-[43px] font-['Montserrat'] uppercase underline decoration-2 underline-offset-8 font-bold text-white mb-6 tracking-wide drop-shadow-md">
+                Lo hacemos por ti
+            </h1>
+            <p class="text-2xl md:text-[35px] text-gray-100 mb-10 font-light drop-shadow-sm leading-tight">
                 Proveemos soluciones <span class="uppercase font-normal">MRO</span> para la industria
             </p>
 
-       <div class="flex flex-wrap justify-center items-center gap-6 opacity-95">
-            
-            <img src="Engranaje.png" alt="Engranajes" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
-            <img src="Inicio/MEDIDOR.png" alt="Medidor" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
-            <img src="Inicio/fabrica.png" alt="Industria"class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
-            <img src="Inicio/monitor.png" alt="Monitor" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-
-            <img src="Inicio/valvula.png" alt="Válvula" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
-            <img src="Inicio/panel.png" alt="Panel Solar" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
-            <img src="Inicio/camara.png" alt="camara" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
-            <img src="Inicio/soporte-tecnico.png" alt="Soporte Tecnológico" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-
-             <img src="Inicio/ventilacion.png" alt="Ventilación" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-
-            <img src="Inicio/Microchip.png" alt="Microchip" class="w-12 h-12 object-contain hover:scale-110 transition-transform cursor-pointer">
-            
+            <!-- Contenedor de Íconos (100% visibles siempre) -->
+            <div class="flex flex-wrap justify-center items-center gap-6 opacity-95">
+                <img src="Engranaje.png" alt="Engranajes" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/MEDIDOR.png" alt="Medidor" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/fabrica.png" alt="Industria" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/monitor.png" alt="Monitor" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/valvula.png" alt="Válvula" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/panel.png" alt="Panel Solar" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/camara.png" alt="Cámara" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/soporte-tecnico.png" alt="Soporte Tecnológico" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/ventilacion.png" alt="Ventilación" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="Inicio/Microchip.png" alt="Microchip" class="w-12 h-12 md:w-14 md:h-14 object-contain hover:scale-110 transition-transform cursor-pointer">
+            </div>
         </div>
     </div>
-<div class="absolute bottom-0 left-0 w-full z-20 bg-white py-6 shadow-lg font-['Montserrat']">
-    <h2 class="text-2xl md:text-3xl font-bold text-[#5c9865] text-center mb-6">Las mejores marcas a tu alcance</h2>
-    
-    <div class="container mx-auto px-4 flex items-center justify-center gap-2 md:gap-6">
-        
-        <button id="btnIzquierda" class="text-gray-300 hover:text-[#2e7d32] text-3xl md:text-4xl transition-colors shrink-0 p-2 z-10">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-            <div id="carruselMarcas" class="grid grid-rows-2 grid-flow-col auto-cols-max items-center justify-items-center gap-x-10 gap-y-8 md:gap-x-16 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 py-4 w-full" style="scrollbar-width: none; -ms-overflow-style: none;">
-            
-            <style>
-                #carruselMarcas::-webkit-scrollbar { display: none; }
-            </style>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Sumitomo-drive-tecnologies.png" alt="Drive Tecnologies" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Baldor.png" alt="Baldor" class="h-full w-auto object-contain">
-            </div>
-            <div class="h-14 md:h-18 lg:h-18 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/sew-drive.png" alt="Marca 3" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-18 lg:h-18 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/drive1.jpg" alt="Nord Drivesystems" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Dodge1_logo.png" alt="Dodge" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-30 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/boston12.svg" alt="Boston" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/norelem.png" alt="Norelem" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Misumi3.jpg" alt="Misumi" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/martin-logo-min.png" alt="Marca 8" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/png_timken.webp" alt="Marca 9" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/skf.jpg" alt="Marca 10" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/NSK.webp" alt="Nueva Marca" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/INA.jpg" alt="Nueva Marca" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/FAG.png" alt="Nueva Marca" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/festo-logo.webp" alt="Festo" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/SMC.png" alt="Nueva Marca" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/PARKER.jpg" alt="Parker Hannifin" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Norgren.png" alt="Norgreen" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Airtac.png" alt="Airtac" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/camozzi1.png" alt="Camozzi" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/bosch_logo_es.png" alt="Bosch" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Hydac.png" alt="Hydac" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Eaton.png" alt="Eaton" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Yuken.png" alt="Yuken" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Danfoss.png" alt="Danfoss" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center"> 
-                <img src="Inicio/MRO/Siemens.png" alt="Siemens" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/allen-bradley.png" alt="Allen-Bradley" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Omron_logo.png" alt="Omron" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/A-B-B.png" alt="ABB" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Phoenix.png" alt="Phoenix Contact" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/WAGO.png" alt="WAGO" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/syscom.png" alt="Syscom" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Hikvision-logo.png" alt="Hikvision" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/dahua.png" alt="Dahua" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Axis_Communications_logo.svg.webp" alt="Axis Communications" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/hanwha-final.png" alt="Hanwha" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Newark.png" alt="Newark" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/texas.png" alt="Texas Instruments" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/electronics1.svg" alt="STMicroelectronics" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/VDE.jpg" alt="VDE" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/grundfos.webp" alt="Grundfos" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Wilo-Logo.png" alt="Wilo" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/KSB1-BUENA.jfif" alt="KSb" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/itt-goulds-pumps-logo.png" alt="ITT Goulds Pumps" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/flowserve.png" alt="Flowserve" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/burkert1.png" alt="Burket" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/hidronix.png" alt="Hydronix" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/dow-water.webp" alt="Dow water" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Logo-hanna.png" alt="Hanna solutions" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/thermo.png" alt="thermo" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Ohaus-logo.png" alt="ohaus" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">     
-                <img src="Inicio/MRO/logovelp.png" alt="Velp Scientifica" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/cole-parmer-asc-logo.png" alt="Cole Parmer" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/HACH LAB.png" alt="Hach" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/columbus-mckinnon.png" alt="Columbus Mckinnons" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Konecranes-BUENA.jpg" alt="Konecranes" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/DEMAG.png" alt="Demag" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/yale.png" alt="yale" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Harrington1.png" alt="Harrington" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/vestil.png" alt="Vestil" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Milwaukee_Logo.svg.png" alt="Milwaukee" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Dewalt_Logo_2023.png" alt="Dewalt" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/MAKITA-LOGO-MT.webp" alt="Makita" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/logo_stanley.png" alt="Stanley" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/snap-on.png" alt="Snap-on" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/proto.jpg" alt="Proto" class="h-full w-auto object-contain">
-            </div>
-
-              <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Jhoson.png" alt="Jhoson Controlls" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Trane.logo.png" alt="Trane" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/carrier-logo-carrier1.png" alt="Carrier" class="h-full w-auto object-contain">
-            </div>
-
-             <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center"> 
-                <img src="Inicio/MRO/York.jpg" alt="York" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/lg1.png" alt="LG Industrial" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/SCHNEIDER-Electric.webp" alt="Schneider Electric" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/siemens.png" alt="SIEMENS" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/Legrand-Logo.png" alt="Legrand" class="h-full w-auto object-contain">
-            </div>
-
-            <div class="h-14 md:h-16 lg:h-20 shrink-0 snap-center hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                <img src="Inicio/MRO/square.webp" alt="Square D" class="h-full w-auto object-contain">
-            </div>
-
-        </div> 
-        <button id="btnDerecha" class="text-gray-300 hover:text-[#2e7d32] text-3xl md:text-4xl transition-colors shrink-0 p-2 z-10">
-            <i class="fas fa-chevron-right"></i>
-        </button>
+<div class="relative w-full z-20 bg-white py-6 shadow-lg font-['Montserrat'] overflow-hidden">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#5c9865] text-center mb-5">Las mejores marcas a tu alcance</h2>
+
+   <style>
+        @keyframes scrollContinuo {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .pista-fila-1 {
+            display: flex;
+            width: max-content;
+            animation: scrollContinuo 5s linear infinite; /* Más rápido */
+        }
+        .pista-fila-2 {
+            display: flex;
+            width: max-content;
+            animation: scrollContinuo 8s linear infinite; /* Velocidad media-rápida */
+        }
+        .pista-fila-3 {
+            display: flex;
+            width: max-content;
+            animation: scrollContinuo 5s linear infinite; /* Rápido intermedio */
+        }
+        .pista-fila-1:hover,
+        .pista-fila-2:hover,
+        .pista-fila-3:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <div class="flex flex-col space-y-5 w-full overflow-hidden">
+
+        <!-- ================= FILA 1 (25 Marcas) ================= -->
+        <div class="w-full overflow-hidden flex">
+            <div class="pista-fila-1 items-center">
+                <!-- Grupo Original -->
+                <div class="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0">
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Sumitomo-drive-tecnologies.png" alt="Drive Tecnologies" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Baldor.png" alt="Baldor" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/sew-drive.png" alt="SEW" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/drive1.jpg" alt="Nord Drivesystems" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Dodge1_logo.png" alt="Dodge" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/boston12.svg" alt="Boston" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/norelem.png" alt="Norelem" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Misumi3.jpg" alt="Misumi" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/martin-logo-min.png" alt="Martin" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/png_timken.webp" alt="Timken" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/skf.jpg" alt="SKF" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/NSK.webp" alt="NSK" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/INA.jpg" alt="INA" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/FAG.png" alt="FAG" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/festo-logo.webp" alt="Festo" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/SMC.png" alt="SMC" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/PARKER.jpg" alt="Parker Hannifin" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Norgren.png" alt="Norgren" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Airtac.png" alt="Airtac" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/camozzi1.png" alt="Camozzi" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/bosch_logo_es.png" alt="Bosch" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Hydac.png" alt="Hydac" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Eaton.png" alt="Eaton" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Yuken.png" alt="Yuken" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Danfoss.png" alt="Danfoss" class="h-full w-auto object-contain"></div>
+                </div>
+                <!-- Grupo Duplicado (Para el bucle infinito sin cortes) -->
+                <div class="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0" aria-hidden="true">
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Sumitomo-drive-tecnologies.png" alt="Drive Tecnologies" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Baldor.png" alt="Baldor" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/sew-drive.png" alt="SEW" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/drive1.jpg" alt="Nord Drivesystems" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Dodge1_logo.png" alt="Dodge" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/boston12.svg" alt="Boston" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/norelem.png" alt="Norelem" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Misumi3.jpg" alt="Misumi" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/martin-logo-min.png" alt="Martin" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/png_timken.webp" alt="Timken" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/skf.jpg" alt="SKF" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/NSK.webp" alt="NSK" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/INA.jpg" alt="INA" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/FAG.png" alt="FAG" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/festo-logo.webp" alt="Festo" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/SMC.png" alt="SMC" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/PARKER.jpg" alt="Parker Hannifin" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Norgren.png" alt="Norgren" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Airtac.png" alt="Airtac" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/camozzi1.png" alt="Camozzi" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/bosch_logo_es.png" alt="Bosch" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Hydac.png" alt="Hydac" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Eaton.png" alt="Eaton" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Yuken.png" alt="Yuken" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Danfoss.png" alt="Danfoss" class="h-full w-auto object-contain"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= FILA 2 (25 Marcas) ================= -->
+        <div class="w-full overflow-hidden flex">
+            <div class="pista-fila-2 items-center">
+                <!-- Grupo Original -->
+                <div class="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0">
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Siemens.png" alt="Siemens" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/allen-bradley.png" alt="Allen-Bradley" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Omron_logo.png" alt="Omron" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/A-B-B.png" alt="ABB" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Phoenix.png" alt="Phoenix Contact" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/WAGO.png" alt="WAGO" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/syscom.png" alt="Syscom" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Hikvision-logo.png" alt="Hikvision" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/dahua.png" alt="Dahua" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Axis_Communications_logo.svg.webp" alt="Axis Communications" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/hanwha-final.png" alt="Hanwha" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Newark.png" alt="Newark" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/texas.png" alt="Texas Instruments" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/electronics1.svg" alt="STMicroelectronics" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Logo_VDE_Footer.webp" alt="VDE" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/grundfos.webp" alt="Grundfos" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Wilo-Logo.png" alt="Wilo" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/KSB1-BUENA.jfif" alt="KSB" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/itt-goulds-pumps-logo.png" alt="ITT Goulds Pumps" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/flowserve.png" alt="Flowserve" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/burkert1.png" alt="Burkert" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/hidronix.png" alt="Hydronix" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/dow-water.webp" alt="Dow Water" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Logo-hanna.png" alt="Hanna Instruments" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/thermo.png" alt="Thermo" class="h-full w-auto object-contain"></div>
+                </div>
+                <!-- Grupo Duplicado -->
+                <div class="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0" aria-hidden="true">
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Siemens.png" alt="Siemens" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/allen-bradley.png" alt="Allen-Bradley" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Omron_logo.png" alt="Omron" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/A-B-B.png" alt="ABB" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Phoenix.png" alt="Phoenix Contact" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/WAGO.png" alt="WAGO" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/syscom.png" alt="Syscom" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Hikvision-logo.png" alt="Hikvision" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/dahua.png" alt="Dahua" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Axis_Communications_logo.svg.webp" alt="Axis Communications" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/hanwha-final.png" alt="Hanwha" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Newark.png" alt="Newark" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/texas.png" alt="Texas Instruments" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/electronics1.svg" alt="STMicroelectronics" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Logo_VDE_Footer.webp" alt="VDE" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/grundfos.webp" alt="Grundfos" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Wilo-Logo.png" alt="Wilo" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/KSB1-BUENA.jfif" alt="KSB" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/itt-goulds-pumps-logo.png" alt="ITT Goulds Pumps" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/flowserve.png" alt="Flowserve" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/burkert1.png" alt="Burkert" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/hidronix.png" alt="Hydronix" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/dow-water.webp" alt="Dow Water" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Logo-hanna.png" alt="Hanna Instruments" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/thermo.png" alt="Thermo" class="h-full w-auto object-contain"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= FILA 3 (25 Marcas) ================= -->
+        <div class="w-full overflow-hidden flex">
+            <div class="pista-fila-3 items-center">
+                <!-- Grupo Original -->
+                <div class="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0">
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Ohaus-logo.png" alt="Ohaus" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/logovelp.png" alt="Velp Scientifica" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/cole-parmer-asc-logo.png" alt="Cole Parmer" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/HACH LAB.png" alt="Hach" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/columbus-mckinnon.png" alt="Columbus McKinnon" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Konecranes-BUENA.jpg" alt="Konecranes" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/DEMAG.png" alt="Demag" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/yale.png" alt="Yale" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Harrington1.png" alt="Harrington" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/vestil.png" alt="Vestil" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Milwaukee_Logo.svg.png" alt="Milwaukee" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Dewalt_Logo_2023.png" alt="DeWalt" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/MAKITA-LOGO-MT.webp" alt="Makita" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/logo_stanley.png" alt="Stanley" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/snap-on.png" alt="Snap-on" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/proto.jpg" alt="Proto" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Jhoson.png" alt="Johnson Controls" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Trane.logo.png" alt="Trane" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/carrier-logo-carrier1.png" alt="Carrier" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/York.jpg" alt="York" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/lg1.png" alt="LG Industrial" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/SCHNEIDER-Electric.webp" alt="Schneider Electric" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/siemens.png" alt="Siemens" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Legrand-Logo.png" alt="Legrand" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/square.webp" alt="Square D" class="h-full w-auto object-contain"></div>
+                </div>
+                <!-- Grupo Duplicado -->
+                <div class="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0" aria-hidden="true">
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Ohaus-logo.png" alt="Ohaus" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/logovelp.png" alt="Velp Scientifica" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/cole-parmer-asc-logo.png" alt="Cole Parmer" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/HACH LAB.png" alt="Hach" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/columbus-mckinnon.png" alt="Columbus McKinnon" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Konecranes-BUENA.jpg" alt="Konecranes" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/DEMAG.png" alt="Demag" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/yale.png" alt="Yale" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Harrington1.png" alt="Harrington" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/vestil.png" alt="Vestil" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Milwaukee_Logo.svg.png" alt="Milwaukee" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Dewalt_Logo_2023.png" alt="DeWalt" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/MAKITA-LOGO-MT.webp" alt="Makita" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/logo_stanley.png" alt="Stanley" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/snap-on.png" alt="Snap-on" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/proto.jpg" alt="Proto" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Jhoson.png" alt="Johnson Controls" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Trane.logo.png" alt="Trane" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/carrier-logo-carrier1.png" alt="Carrier" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/York.jpg" alt="York" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/lg1.png" alt="LG Industrial" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/SCHNEIDER-Electric.webp" alt="Schneider Electric" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/siemens.png" alt="Siemens" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/Legrand-Logo.png" alt="Legrand" class="h-full w-auto object-contain"></div>
+                    <div class="h-10 md:h-12 shrink-0 hover:scale-110 transition-transform duration-300 flex items-center justify-center"><img src="Inicio/MRO/square.webp" alt="Square D" class="h-full w-auto object-contain"></div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const carrusel = document.getElementById('carruselMarcas');
-        const btnIzquierda = document.getElementById('btnIzquierda');
-        const btnDerecha = document.getElementById('btnDerecha');
-
-        let intervalo; // Variable para guardar el motor automático
-
-        // 1. Función que mueve el carrusel hacia la derecha
-        const moverDerecha = () => {
-            // 👇 LA MAGIA AQUÍ: Calculamos el ancho visible en tiempo real
-            // Esto asegura que avance "una página" completa sin dejar logos a la mitad
-            const scrollAmount = carrusel.clientWidth; 
-
-            // Revisa si ya llegó al final del carrusel
-            if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
-                // Si llegó al final, regresa suavemente al inicio
-                carrusel.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                // Si no, sigue avanzando normal
-                carrusel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        };
-
-        // 2. Función para iniciar el movimiento automático
-        const iniciarAutoScroll = () => {
-            intervalo = setInterval(moverDerecha, 3000); // Lo subí a 3 seg (3000) para dar tiempo a ver las 4 marcas
-        };
-
-        // 3. Función para detener el movimiento
-        const detenerAutoScroll = () => {
-            clearInterval(intervalo);
-        };
-
-        // EVENTOS MANUALES (Clics en las flechas)
-        btnIzquierda.addEventListener('click', () => {
-            const scrollAmount = carrusel.clientWidth; // Calcula también al ir hacia atrás
-            carrusel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-
-        btnDerecha.addEventListener('click', moverDerecha);
-
-        // EVENTOS INTELIGENTES (Pausar si el usuario quiere ver un logo de cerca)
-        carrusel.addEventListener('mouseenter', detenerAutoScroll); // El mouse entra = Pausa
-        carrusel.addEventListener('mouseleave', iniciarAutoScroll); // El mouse sale = Sigue moviéndose
-        carrusel.addEventListener('touchstart', detenerAutoScroll); // Para celulares (tocar la pantalla)
-        carrusel.addEventListener('touchend', iniciarAutoScroll);   // Quitar el dedo
-
-        // Encendemos el motor automático por primera vez al cargar la página
-        iniciarAutoScroll();
-    });
-</script>
 </section>
   <section class="bg-[#2d2d2d] mt-20 py-16 font-['Montserrat']"> <!--PY Es la parte de ancho de MR -->
-    <div class="container mx-auto max-w-5xl"> <-- Cambié max-w-6xl a max-w-5xl para que se vea mejor en pantallas grandes -->
+    <div class="container mx-auto max-w-5xl"> <!-- Cambié max-w-6xl a max-w-5xl para que se vea mejor en pantallas grandes -->
         <h2 class="text-3xl font-bold text-white mb-10 text-center md:text-left">Nuestras industrias</h2>
 
         <div class="flex flex-col gap-6">
@@ -618,9 +531,9 @@
     <div class="flex flex-col md:flex-row items-center justify-between w-full h-auto md:h-80 relative z-20">
         
         <div class="w-full md:w-[40%] h-60 md:h-full relative shrink-0">
-            <img src="Inicio/Encabezado2.png"
+            <img src="Inicio/Encabezado1.png"
                  alt="Ingenieros SOEL"
-                 class="absolute inset-0 w-full h-full object-cover object-center opacity-100">
+                 class="absolute inset-0 w-140 h-140 object-cover object-center opacity-100">
                  
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#2e7d32]/80 to-[#2e7d32]"></div>
 

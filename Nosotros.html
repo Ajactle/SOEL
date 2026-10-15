@@ -33,13 +33,28 @@
          <div class="flex items-center">
             <img src="LogoSoel.jpeg" alt="Logo SOEL" class="h-12 w-12 rounded-full mr-3"> 
         </div>
+        <!-- 2. MENÚ DE ESCRITORIO (Se oculta en celular, aparece en pantallas medianas/grandes) -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10 text-sm text-[#2e7d32] font-medium">
+            <a href="index.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Inicio</a>
+            <a href="Nosotros.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Nosotros</a>
+            <a href="soluciones.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Soluciones</a>
+            <a href="Como_lo_hacemos.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">¿Cómo lo hacemos?</a>
+        </nav>
+         <!-- 4. MENÚ DESPLEGABLE PARA CELULARES (Oculto por defecto) -->
+    <div id="menuMovil" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
+        <a href="index.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Inicio</a>
+        <a href="Nosotros.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Nosotros</a>
+        <a href="soluciones.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Soluciones</a>
+        <a href="Como_lo_hacemos.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">¿Cómo lo hacemos?</a>
+        
+        <!-- Botón de cotización dentro del menú móvil para celulares -->
+        <div class="pt-2 sm:hidden">
+            <a href="contacto.html" class="block w-full text-center bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2.5 rounded-full transition shadow-md">
+                Solicitar cotización
+            </a>
+        </div>
+    </div>
 
-      <nav class="hidden md:flex items-center space-x-10 text-sm text-gray-600 font-medium">
-                <a href="index.html" class="text-gray-400 hover:text-[#2e7d32] transition">Inicio <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></a>
-                <a href="Nosotros.html" class="text-[#2e7d32] font-semibold transition">Nosotros <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></a>
-                <a href="Soluciones.html" class="text-gray-400 hover:text-[#2e7d32] transition">Soluciones <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></a>
-                <a href="Como_lo_hacemos.html" class="text-gray-400 hover:text-[#2e7d32] transition">¿Cómo lo hacemos? <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></a>
-            </nav>
 
             <div class="flex items-center">
                 <a href="contacto.html" class="bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition shadow-md">
@@ -88,12 +103,10 @@
 
 
     <div class="w-full md:w-[60%] p-8 md:p-12 z-20 text-left">
-        
-        <h2 class="text-4xl font-bold mb-4 text-green-500 underline decoration-green decoration-2 underline-offset-8">
+         <h2 class="text-4xl font-bold mb-4 text-green-500 underline decoration-green decoration-2 underline-offset-8">
             NOSOTROS
         </h2>
-        
-        <p class="text-white text-justify leading-relaxed text-justify font-['Montserrat']"></p>
+          <p class="text-white text-justify leading-relaxed font-['Montserrat']"></p>
 Nos esforzamos por innovar constantemente y adaptarnos a las necesidades del mercado, garantizando así que nuestros clientes siempre encuentren en nosotros un aliado confiable. Creemos firmemente en la importancia de construir relaciones duraderas por ello, nos comprometemos a brindarle a nuestros clientes, productos y servicios de alta calidad que impulsen al éxito.</p>
     </div>
 </div>
@@ -110,7 +123,7 @@ Nos esforzamos por innovar constantemente y adaptarnos a las necesidades del mer
             MISIÓN
         </h2>
         
-        <p class="text-gray-300 text-left leading-relaxed font-['Montserrat']">
+        <p class="text-gray-300 text-justify leading-relaxed font-['Montserrat']">
             Proveer a la industria con productos y servicios de la más alta calidad, optimizando sus procesos productivos de manera eficiente, segura y rentable en todo momento.
         </p>
     </div>
@@ -124,7 +137,7 @@ Nos esforzamos por innovar constantemente y adaptarnos a las necesidades del mer
             VISIÓN
         </h2>
         
-        <p class="text-white text-lg leading-relaxed font-['Montserrat']">
+        <p class="text-white text justify text-lg leading-relaxed font-['Montserrat']">
             Ser la empresa líder a nivel nacional en soluciones de abastecimiento y proyectos MRO, siendo reconocidos por nuestra innovación, confiabilidad y compromiso total.
         </p>
     </div>

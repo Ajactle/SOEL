@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/Importaciones.html"
+  "livePreview.defaultPreviewPath": "/Importaciones.html",
+  "liveServer.settings.port": 5501
 }
