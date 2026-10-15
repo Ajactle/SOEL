@@ -9,61 +9,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="font-sans antialiased text-gray-800 bg-white">
-    
-    <div class="bg-[#2e7d32] text-white text-xs py-2 px-4 hidden md:block">
-        <div class="container mx-auto flex justify-start items-center space-x-6 pl-4">
-            
-            <a href="https://wa.me/522711004419?text=Hola,%20busco%20información%20sobre%20las%20soluciones%20MRO%20de%20SOEL%20360" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="flex items-center hover:text-gray-200 transition-colors cursor-pointer">
-                <i class="fa-solid fa-phone mr-1.5"></i> (271) 100 4419
-            </a>
-
-            <a href="mailto:contacto@soel.com.mx?subject=Consulta%20desde%20sitio%20web" 
-               class="flex items-center hover:text-gray-200 transition-colors cursor-pointer">
-                <i class="fa-solid fa-envelope mr-1.5"></i> contacto@soel.com.mx
-            </a>
-
-        </div>
-    </div>
-<body class="font-sans antialiased text-gray-800 bg-gray-100">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-         <div class="flex items-center">
-            <img src="LogoSoel.jpeg" alt="Logo SOEL" class="h-12 w-12 rounded-full mr-3"> 
-        </div>
-
-      <!-- 2. MENÚ DE ESCRITORIO (Se oculta en celular, aparece en pantallas medianas/grandes) -->
+<header class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100 font-['Montserrat']">
+    <!-- Contenedor principal -->
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 py-3 md:py-4 flex justify-between items-center gap-2">
+        
+        <!-- 1. LOGO -->
+        <a href="index.html" class="flex items-center shrink-0">
+            <img src="LogoSoel.jpeg" alt="Logo SOEL" class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover"> 
+        </a>
+        
+        <!-- 2. MENÚ DE ESCRITORIO -->
         <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10 text-sm text-[#2e7d32] font-medium">
             <a href="index.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Inicio</a>
             <a href="Nosotros.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Nosotros</a>
             <a href="soluciones.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">Soluciones</a>
             <a href="Como_lo_hacemos.html" class="text-[#2e7d32] hover:opacity-80 transition whitespace-nowrap">¿Cómo lo hacemos?</a>
         </nav>
-         <!-- 4. MENÚ DESPLEGABLE PARA CELULARES (Oculto por defecto) -->
-    <div id="menuMovil" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
-        <a href="index.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Inicio</a>
-        <a href="Nosotros.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Nosotros</a>
-        <a href="soluciones.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">Soluciones</a>
-        <a href="Como_lo_hacemos.html" class="block text-[#2e7d32] font-medium py-1 hover:pl-2 transition-all">¿Cómo lo hacemos?</a>
-        
-        <!-- Botón de cotización dentro del menú móvil para celulares -->
-        <div class="pt-2 sm:hidden">
-            <a href="contacto.html" class="block w-full text-center bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2.5 rounded-full transition shadow-md">
+
+        <!-- 3. BLOQUE DERECHO -->
+        <div class="flex items-center gap-2 sm:gap-4">
+            
+            <!-- Buscador en tiempo real -->
+            <div class="relative group">
+                <div class="flex items-center bg-gray-100 rounded-full px-2.5 py-1.5 border border-transparent focus-within:border-[#2e7d32] transition-colors shadow-inner">
+                    <button id="btnBuscar" class="outline-none focus:outline-none group-hover:text-[#2e7d32] transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500 hover:text-[#2e7d32] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <input type="text" id="buscadorWeb" placeholder="Buscar..." 
+                           class="bg-transparent border-none outline-none text-xs sm:text-sm ml-1.5 w-20 sm:w-28 md:w-36 focus:w-28 sm:focus:w-44 transition-all duration-300 text-gray-700 placeholder-gray-400">
+                </div>
+                <!-- Contenedor de resultados JS -->
+                <div id="resultadosBusqueda" class="absolute top-full mt-2 right-0 sm:left-0 w-56 sm:w-full min-w-[200px] bg-white border border-gray-100 rounded-lg shadow-xl hidden flex-col overflow-hidden z-[60]">
+                </div>
+            </div>
+
+            <!-- Icono de Aplicaciones -->
+            <a href="index.html#aplicaciones" class="text-gray-600 hover:text-[#2e7d32] transition-colors cursor-pointer text-xl md:text-2xl flex items-center justify-center p-1 shrink-0" title="MRO">
+                <i class="fa-solid fa-grip"></i> 
+            </a>
+            
+            <!-- Botón Solicitar Cotización -->
+            <a href="contacto.html" class="hidden sm:inline-block bg-[#2e7d32] hover:bg-green-800 text-white text-xs md:text-sm font-semibold py-2 px-4 md:px-6 rounded-full transition shadow-md whitespace-nowrap">
                 Solicitar cotización
             </a>
-        </div>
-    </div>
 
-            <div class="flex items-center">
-                <a href="contacto.html" class="bg-[#2e7d32] hover:bg-green-800 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition shadow-md">
-                    Solicitar cotización
-                    <script src="buscador.js"></script>
-                </a>
-            </div>
+            <!-- Botón Hamburguesa -->
+            <button id="btnMenuMovil" class="lg:hidden text-[#2e7d32] text-2xl p-1 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-    </header>
+
+    </div>
       <div class="relative w-full bg-[#1a1a1a] text-white overflow-hidden mb-12 font-['Montserrat']"> 
 
     <div class="flex flex-col-reverse md:flex-row items-center justify-between w-full h-auto md:h-72 relative z-20">
